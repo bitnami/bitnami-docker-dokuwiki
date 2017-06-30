@@ -212,9 +212,9 @@ To backup your application data follow these steps:
 2. Copy the Dokuwiki data folder in the host:
 
 ```
-$ docker cp /path/to/dokuwiki-persitence:/bitnami/dokuwiki
-$ docker cp /path/to/apache-persitence:/bitnami/apache
-$ docker cp /path/to/php-persitence:/bitnami/php
+$ docker cp /path/to/dokuwiki-persistence:/bitnami/dokuwiki
+$ docker cp /path/to/apache-persistence:/bitnami/apache
+$ docker cp /path/to/php-persistence:/bitnami/php
 ```
 
 # Restoring a backup
