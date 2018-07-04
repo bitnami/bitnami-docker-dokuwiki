@@ -20,6 +20,9 @@ ENV APACHE_HTTPS_PORT_NUMBER="443" \
     DOKUWIKI_WIKI_NAME="Bitnami DokuWiki" \
     PATH="/opt/bitnami/apache/bin:/opt/bitnami/php/bin:$PATH"
 
+# Modify .htaccess to support nice url rewriting
+COPY conf/.htaccess /opt/bitnami/dokuwiki/
+
 EXPOSE 80 443
 
 ENTRYPOINT ["/app-entrypoint.sh"]

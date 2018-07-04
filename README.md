@@ -189,6 +189,31 @@ Available variables:
  - `DOKUWIKI_EMAIL`: Dokuwiki application email. Default: **user@example.com**
  - `DOKUWIKI_WIKI_NAME`: Dokuwiki wiki name. Default: **Bitnami DokuWiki**
 
+## Nice Url Rewriting
+
+To enable [url rewriting](https://www.dokuwiki.org/rewrite), modify the AllowOverride directive at `/bitnami/apache/conf/vhosts/dokuwiki-vhost.conf`:
+
+```
+AddType application/x-httpd-php .php
+
+<VirtualHost  127.0.0.1:80  _default_:80>
+  ServerAlias *
+
+  DocumentRoot /opt/bitnami/dokuwiki
+  <Directory "/opt/bitnami/dokuwiki">
+    Options -Indexes +FollowSymLinks -MultiViews
+    AllowOverride All
+    Require all granted
+    DirectoryIndex index.html index.php
+
+
+  </Directory>
+  Include /opt/bitnami/apache/conf/vhosts/htaccess/dokuwiki-htaccess.conf
+</VirtualHost>
+```
+
+Then enable the url rewriting option in the configuration manager as [documented on the wiki](https://www.dokuwiki.org/rewrite).
+
 # Notable Changes
 
 ## 0.20170219.201708232029-r3
