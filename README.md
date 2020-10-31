@@ -137,7 +137,7 @@ Available environment variables:
 
 ##### User and Site configuration
 
- - `DOKUWIKI_USERNAME`: Dokuwiki application SuperUser name. Default: **superuser**
+ - `DOKUWIKI_USERNAME`: Dokuwiki application SuperUser name. Default: **user**
  - `DOKUWIKI_FULL_NAME`: Dokuwiki SuperUser Full Name. Default: **Full Name**
  - `DOKUWIKI_PASSWORD`: Dokuwiki application password. Default: **bitnami1**
  - `DOKUWIKI_EMAIL`: Dokuwiki application email. Default: **user@example.com**
